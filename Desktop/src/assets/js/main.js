@@ -45,7 +45,7 @@ function showErrors (errMsg = []) {
     errorBlock.innerHTML = errStr.join('\r\n');
     errorBlock.classList.add('show');
 
-    setTimeout(resetErrors, 4000);
+    setTimeout(resetErrors, 3000);
   }
 }
 
