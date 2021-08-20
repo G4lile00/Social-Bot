@@ -30,11 +30,15 @@ npm start
 ```
 ### Local build
 
-### (Working only on windows)
-### For other sistems use the Live build
+### For Windows
 
 ```
 npm run make
+```
+
+### For Debian
+```
+npm run make --target=@electron-forge/maker-deb
 ```
 
 ## Use
