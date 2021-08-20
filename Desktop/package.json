@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make --target=@electron-forge/maker-deb",
+    "make": "electron-forge make",
     "publish": "electron-forge publish"
   },
   "repository": {
