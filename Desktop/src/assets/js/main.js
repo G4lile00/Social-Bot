@@ -61,13 +61,11 @@ function resetErrors () {
  * Initiate bot after validating input
  */
 function runBot () {
-  // if (validateInput()) {
-  //   likeRate()
-  //   bot();
-  // }
-
-  validateInput()
-  console.log('RECAHEDD')
+  if (validateInput()) {
+    likeRate()
+    bot();
+    return;
+  }
   return false;
 }
 
