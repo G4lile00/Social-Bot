@@ -43,7 +43,8 @@
         {
           "name": "@electron-forge/maker-deb",
           "config": {
-            "executableName": "social-bot"
+            "executableName": "social-bot",
+            "icon": "./icon/likes.png"
           }
         }
       ]
