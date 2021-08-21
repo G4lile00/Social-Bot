@@ -64,6 +64,9 @@ function addComment (addCloseBtn = true) {
   const commentBlock = document.querySelector('#commentBody')
   if (!commentBlock) return;
 
+  const inputLeft = document.querySelectorAll('input.comment-input');
+  if (inputLeft.length === 0) commentBlock.innerHTML = '';
+
   const inputTemplate = document.createElement('div');
   inputTemplate.classList.add('row', 'form-group');
 
@@ -86,7 +89,11 @@ function addComment (addCloseBtn = true) {
     inputCloseBtn.innerHTML = `<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>`
     inputCloseBtn.classList.add('btn', 'btn-default')
     inputCloseBtn.setAttribute('type', 'button')
-    inputCloseBtn.addEventListener('click', () => inputTemplate.remove())
+    inputCloseBtn.addEventListener('click', () => {
+      inputTemplate.remove()
+      const inputLeft = document.querySelectorAll('input.comment-input');
+      if (inputLeft.length === 0) commentBlock.innerHTML = '<div class="alert alert-info" style="margin: 0">No Comments</div>'
+    })
 
     inputCloseDiv.appendChild(inputCloseBtn)
     inputTemplate.appendChild(inputCloseDiv)
@@ -113,5 +120,5 @@ window.onload = () => {
   ['change', 'mousemove'].forEach(event => document.querySelector('input[type=range]').addEventListener(event, rangeSlide)); // Set the range value
   document.querySelector('#Botrun').addEventListener('click', runBot) // Trigger for bot to start working 
   document.querySelector('#addCommentsRow').addEventListener('click', addComment)
-  addComment(false); // Adds the first row for comments block
+  addComment(); // Adds the first row for comments block
 }
