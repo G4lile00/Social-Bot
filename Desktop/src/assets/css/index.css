@@ -8,6 +8,23 @@ body{
 *:focus {
     outline: none;
 }
+
+.pd5 {
+    padding:5px
+}
+
+.pd5p{
+    padding: 5%
+}
+
+.pd10 {
+    padding: 10px
+}
+
+.pd10p {
+    padding: 10%
+}
+
 .header{
     height: 12vh;
     width: 100%;
@@ -91,18 +108,18 @@ body{
     opacity: 1;
 }
 .div-display{
-    height: 7vh;
-    width: 12vw;
+    /* height: 7vh;
+    width: 12vw; */
     background-color: #1a1a1a;
     margin:0px;
     border: 3px solid #b026ff;
     border-radius: 12px;
-    margin-top: 2vh;
-    margin-left: 40%;
+    /* margin-top: 2vh;
+    margin-left: 40%; */
     text-align:  center;
     overflow: hidden;
 }
-span{
+.div-display span{
     position: relative;
     font-size: 3em;
     color: #ecf2f8;
@@ -113,6 +130,16 @@ span{
 #rangeValue {
     text-align: center;
     
+}
+
+.panel-primary {
+    border-color: #b026ff;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #b026ff;
+    border-color: #b026ff;
 }
 
 .range {
@@ -219,6 +246,44 @@ span{
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 
 @-webkit-keyframes fadein {
     from {top: 0; opacity: 0;}
@@ -238,4 +303,10 @@ span{
 @keyframes fadeout {
     from {top: 30px; opacity: 1;}
     to {top: 0; opacity: 0;}
+}
+
+@media only screen and (max-width: 999px) {
+    .div-display{
+        margin-top: 2vh;
+    }
 }
