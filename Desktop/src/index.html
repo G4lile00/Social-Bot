@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div id="snackbar" class=""></div>
+    <div id="snackbar" class=""></div>  <!-- Error -->
     <div class="header">
       <p>SOCIAL BOT</p>
     </div>
@@ -21,19 +21,38 @@
         <input type="text" id="login" class="login form-control" placeholder="  Login "><br>
         <input type="password" id="pass" class="pass form-control" placeholder="  Password  "><br>
       </div>
-      <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <input class="range" type="range" name= "" value="0" min="0" max="100"></Input>
-        <div class="recomend panel panel-default">
-          <div class="panel-body">
-            <p>This bar will select the like range of the bot</p>
-            <p>like rates over 72% can cause temporarily ban on your account</p>
+      <div id="commentBox" class="col-xs-12 pd5"> <!-- Comment box -->
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-10 text-left">
+                <h4>Add Comments</h4>
+              </div>
+              <div class="col-xs-2 text-right">
+                <button type="button" class="btn btn-default" id="addCommentsRow">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
           </div>
+          <div id="commentBody" class="panel-body"></div>
         </div>
       </div>
-      <div class="col-xs-12">
-        <div class="div-display">
-          <span id="rangeValue">0</span>
-          <span>%</span><br>
+      <div class="row">
+        <div class="col-xs-12 col-md-7 col-md-offset-1">
+          <input class="range" type="range" name= "" value="0" min="0" max="100"></Input>
+          <div class="recomend panel panel-default">
+            <div class="panel-body">
+              <p>This bar will select the like range of the bot</p>
+              <p>like rates over 72% can cause temporarily ban on your account</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="div-display">
+            <span id="rangeValue">0</span>
+            <span>%</span><br>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-md-6 col-md-offset-3">

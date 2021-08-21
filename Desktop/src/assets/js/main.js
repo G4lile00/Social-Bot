@@ -56,6 +56,45 @@ function resetErrors () {
   
 }
 
+/**
+ * Add comments input to the comment block
+ * @returns 
+ */
+function addComment (addCloseBtn = true) {
+  const commentBlock = document.querySelector('#commentBody')
+  if (!commentBlock) return;
+
+  const inputTemplate = document.createElement('div');
+  inputTemplate.classList.add('row', 'form-group');
+
+  const inputFieldDiv = document.createElement('div')
+  inputFieldDiv.classList.add((addCloseBtn) ? 'col-xs-11' : 'col-xs-12');
+
+  const inputField = document.createElement('input')
+  inputField.classList.add('form-control', 'comment-input')
+  inputField.setAttribute('type', 'text')
+  inputField.setAttribute('placeholder', 'Type comment')
+
+  inputFieldDiv.appendChild(inputField)
+  inputTemplate.appendChild(inputFieldDiv)
+
+  if (addCloseBtn) {
+    const inputCloseDiv = document.createElement('div');
+    inputCloseDiv.classList.add('col-xs-1');
+
+    const inputCloseBtn = document.createElement('button');
+    inputCloseBtn.innerHTML = `<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>`
+    inputCloseBtn.classList.add('btn', 'btn-default')
+    inputCloseBtn.setAttribute('type', 'button')
+    inputCloseBtn.addEventListener('click', () => inputTemplate.remove())
+
+    inputCloseDiv.appendChild(inputCloseBtn)
+    inputTemplate.appendChild(inputCloseDiv)
+  }
+
+  commentBlock.appendChild(inputTemplate);
+}
+
 
 /**
  * Initiate bot after validating input
@@ -73,4 +112,6 @@ window.onload = () => {
   /************************ Assigning events ***************************/
   ['change', 'mousemove'].forEach(event => document.querySelector('input[type=range]').addEventListener(event, rangeSlide)); // Set the range value
   document.querySelector('#Botrun').addEventListener('click', runBot) // Trigger for bot to start working 
+  document.querySelector('#addCommentsRow').addEventListener('click', addComment)
+  addComment(false); // Adds the first row for comments block
 }
