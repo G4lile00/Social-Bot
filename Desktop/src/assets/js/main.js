@@ -1,3 +1,8 @@
+//Variable define area
+
+const comments = [];
+
+
 function rangeSlide(event) {
   const value = event.target.value
   document.getElementById('rangeValue').innerHTML = value;
@@ -56,13 +61,58 @@ function resetErrors () {
   
 }
 
+/**
+ * Add comments input to the comment block
+ * @returns 
+ */
+function addComment (addCloseBtn = true) {
+  const commentBlock = document.querySelector('#commentBody')
+  if (!commentBlock) return;
+
+  const inputLeft = document.querySelectorAll('input.comment-input');
+  if (inputLeft.length === 0) commentBlock.innerHTML = '';
+
+  const inputTemplate = document.createElement('div');
+  inputTemplate.classList.add('row', 'form-group');
+
+  const inputFieldDiv = document.createElement('div')
+  inputFieldDiv.classList.add((addCloseBtn) ? 'col-xs-11' : 'col-xs-12');
+
+  const inputField = document.createElement('input')
+  inputField.classList.add('form-control', 'comment-input')
+  inputField.setAttribute('type', 'text')
+  inputField.setAttribute('placeholder', 'Type comment')
+
+  inputFieldDiv.appendChild(inputField)
+  inputTemplate.appendChild(inputFieldDiv)
+
+  if (addCloseBtn) {
+    const inputCloseDiv = document.createElement('div');
+    inputCloseDiv.classList.add('col-xs-1');
+
+    const inputCloseBtn = document.createElement('button');
+    inputCloseBtn.innerHTML = `<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>`
+    inputCloseBtn.classList.add('btn', 'btn-default')
+    inputCloseBtn.setAttribute('type', 'button')
+    inputCloseBtn.addEventListener('click', () => {
+      inputTemplate.remove()
+      const inputLeft = document.querySelectorAll('input.comment-input');
+      if (inputLeft.length === 0) commentBlock.innerHTML = '<div class="alert alert-info" style="margin: 0">No Comments</div>'
+    })
+
+    inputCloseDiv.appendChild(inputCloseBtn)
+    inputTemplate.appendChild(inputCloseDiv)
+  }
+
+  commentBlock.appendChild(inputTemplate);
+}
 
 /**
  * Initiate bot after validating input
  */
 function runBot () {
   if (validateInput()) {
-    likeRate()
+    likeRate();
     bot();
     return;
   }
@@ -73,4 +123,6 @@ window.onload = () => {
   /************************ Assigning events ***************************/
   ['change', 'mousemove'].forEach(event => document.querySelector('input[type=range]').addEventListener(event, rangeSlide)); // Set the range value
   document.querySelector('#Botrun').addEventListener('click', runBot) // Trigger for bot to start working 
+  document.querySelector('#addCommentsRow').addEventListener('click', addComment)
+  addComment(); // Adds the first row for comments block
 }
