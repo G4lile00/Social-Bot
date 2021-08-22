@@ -1,3 +1,8 @@
+//Variable define area
+
+const comments = [];
+
+
 function rangeSlide(event) {
   const value = event.target.value
   document.getElementById('rangeValue').innerHTML = value;
@@ -102,13 +107,12 @@ function addComment (addCloseBtn = true) {
   commentBlock.appendChild(inputTemplate);
 }
 
-
 /**
  * Initiate bot after validating input
  */
 function runBot () {
   if (validateInput()) {
-    likeRate()
+    likeRate();
     bot();
     return;
   }
