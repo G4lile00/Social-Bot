@@ -106,7 +106,30 @@ async function bot() {
         await page.click("a._65Bje");
       }
     }
+    if (rand >=  80){
+      let Commented = ''
+      if (comments.length > 0) {
+        const random = Math.floor(Math.random() * comments.length);
+    
+        const commentVal = comments[random].trim();
+        if (commentVal && commentVal.length > 0) {  // If comment got anything only thn comment
+          Commented = commentVal
+        }
+      }
+    
+      try {
+        await page.waitFor(2000);
 
+        await page.type('textarea[class="Ypffh"]', Commented);
+
+        await page.click("form.X7cDz button.sqdOP");
+        
+      } catch {
+        await page.waitForSelector("a._65Bje");
+        await page.click("a._65Bje");
+      }
+    }
+    
     //skip photo
 
     await page.waitForSelector("a._65Bje");
