@@ -26,15 +26,15 @@ async function bot() {
   const likerate = 100 - value_like;
 
   // Setting comments
+  const comments = [];
   function setComments() {
     const CommentsValue = document.querySelectorAll("input.comment-input");
-    const Comments = [];
     CommentsValue.forEach(function (element) {
       const commentVal = element.value.trim();
-      if (commentVal && commentVal.length) comments.push(element.value)
+      console.log(commentVal);
+      comments.push(commentVal)
     });
   }
-  console.log(comments)
   //
   setComments();
   //variable set
@@ -45,19 +45,20 @@ async function bot() {
   });
 
   const page = await browser.newPage();
-
+  await page.setViewport({ width: 1920, height: 1080 })
   alert("You have iniciated the Bot");
 
-  l = 0;
+  let l = 0;
+  let c = 0;
 
   document.getElementById("account").innerText = user;
 
   document.getElementById("likes").innerText = l;
+  document.getElementById("comments").innerText = c;
 
   document.getElementById("total").innerText = 0;
 
   //page get
-
   await page.goto("https://www.instagram.com/accounts/login/");
 
   await page.waitForSelector('input[name="username"]');
@@ -95,7 +96,7 @@ async function bot() {
       //like photo
       try {
         await page.waitFor(2000);
-
+        
         await page.click("span.fr66n button.wpO6b");
 
         l++;
@@ -123,6 +124,8 @@ async function bot() {
         await page.type('textarea[class="Ypffh"]', Commented);
 
         await page.click("form.X7cDz button.sqdOP");
+        c++;
+        document.getElementById("comments").innerText = c;
         
       } catch {
         await page.waitForSelector("a._65Bje");
@@ -144,3 +147,4 @@ async function bot() {
 
 //signature G4lile0
 //signature kgoel085
+//signature LittleThug
