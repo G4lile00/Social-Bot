@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Instagram Bot</title>
   <link def rel="preconnect" href="https://fonts.googleapis.com">
   <link def rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link def href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link def rel="stylesheet" href="./assets/css/index.css">
 </head>
+
 <body>
   <div class="container-fluid">
-    <div id="snackbar" class=""></div>  <!-- Error -->
+    <div id="snackbar" class=""></div> <!-- Error -->
     <div class="header">
       <p>SOCIAL BOT</p>
     </div>
-    
+
     <div class="row config">
       <div class="col-xs-12">
         <input type="text" id="login" class="login form-control" placeholder="  Login "><br>
         <input type="password" id="pass" class="pass form-control" placeholder="  Password  "><br>
       </div>
-      <div id="commentBox" class="col-xs-12 pd5"> <!-- Comment box -->
+      <div id="commentBox" class="col-xs-12 pd5">
+        <!-- Comment box -->
         <div class="panel panel-primary">
           <div class="panel-heading">
             <div class="row">
@@ -40,7 +44,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12 col-md-7 col-md-offset-1">
-          <input class="range" type="range" name= "" value="0" min="0" max="100"></Input>
+          <input class="range" type="range" name="" value="0" min="0" max="100"></Input>
           <div class="recomend panel panel-default">
             <div class="panel-body">
               <p>This bar will select the like range of the bot</p>
@@ -56,17 +60,17 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <button id="Botrun" type="button" class="run btn btn-default btn-block" >Run the bot</button>
+        <button id="Botrun" type="button" class="run btn btn-default btn-block">Run the bot</button>
       </div>
     </div>
   </div>
   <div class="row info">
     <table class="tablefix" align="center">
       <tr>
-        <th >Account</th>
+        <th>Account</th>
         <th>Like rate</th>
         <th>Likes</th>
-        <th >Total</th>
+        <th>Total</th>
       </tr>
       <tr>
         <td id="account"></td>
@@ -76,8 +80,9 @@
       </tr>
     </table>
   </div>
-</div>
+  </div>
 </body>
 <script defer src="./assets/js/bot.js"></script>
-<script defer src="./assets/js/main.js"></script>  
+<script defer src="./assets/js/main.js"></script>
+
 </html>
