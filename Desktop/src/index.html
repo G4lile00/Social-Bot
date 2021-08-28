@@ -7,80 +7,83 @@
   <link def rel="preconnect" href="https://fonts.googleapis.com">
   <link def rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link def href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link def rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div id="snackbar" class=""></div> <!-- Error -->
-    <div class="header">
-      <p>SOCIAL BOT</p>
-    </div>
+  <div class="header">
+    <p>SOCIAL BOT</p>
+  </div>
+  <div class="global">
 
-    <div class="row config">
-      <div class="col-xs-12">
-        <input type="text" id="login" class="login form-control" placeholder="  Login "><br>
-        <input type="password" id="pass" class="pass form-control" placeholder="  Password  "><br>
-      </div>
-      <div id="commentBox" class="col-xs-12 pd5">
-        <!-- Comment box -->
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-10 text-left">
-                <h4>Add Comments</h4>
-              </div>
-              <div class="col-xs-2 text-right">
-                <button type="button" class="btn btn-default" id="addCommentsRow">
-                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </button>
-              </div>
+
+    <div class="config">
+
+
+      <div id="commentBox">
+        <div>
+          <div>
+            <div class="comments_header">
+              <p>Add Comments
+                <button type="button" class="btn" id="addCommentsRow"><i class="fa fa-plus"></i></button>
+              </p>
             </div>
           </div>
           <div id="commentBody" class="panel-body"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-7 col-md-offset-1">
-          <input class="range" type="range" name="" value="0" min="0" max="100"></Input>
-          <div class="recomend panel panel-default">
-            <div class="panel-body">
-              <p>This bar will select the like range of the bot</p>
-              <p>like rates over 72% can cause temporarily ban on your account</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3">
-          <div class="div-display">
-            <span id="rangeValue">0</span>
-            <span>%</span><br>
-          </div>
+
+
+      <div class="range-div">
+        <input class="range" type="range" name="" value="0" min="1" max="100"></Input>
+        <span id="rangeValue" calss="div-display">0</span>
+        <span>%</span><br>
+        <div class="recomend">
+          <p>This bar will select the like range of the bot</p>
+          <p>like rates over 72% can cause temporarily ban on your account</p>
         </div>
       </div>
-      <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <button id="Botrun" type="button" class="run btn btn-default btn-block">Run the bot</button>
+
+    </div>
+
+
+    <div class="info">
+      <div class="table">
+        <table class="table-info">
+          <tr>
+            <th>Account</th>
+            <td id="account"></td>
+          </tr>
+          <tr>
+            <th>Like rate</th>
+            <td id="likerate"></td>
+          </tr>
+          <tr>
+            <th>Likes</th>
+            <td id="likes"></td>
+          </tr>
+          <tr>
+            <th>Total</th>
+            <td id="total"></td>
+          </tr>
+
+        </table>
+      </div>
+
+
+      <div id="snackbar" class=""></div>
+
+    </div>
+    <div class="user">
+      <div class="setup">
+        <input type="text" id="login" class="login form-control" placeholder="  Login "><br>
+        <input type="password" id="pass" class="pass form-control" placeholder="  Password  "><br>
+        <button id="Botrun" type="button" class="run">Run the bot</button>
       </div>
     </div>
   </div>
-  <div class="row info">
-    <table class="tablefix" align="center">
-      <tr>
-        <th>Account</th>
-        <th>Like rate</th>
-        <th>Likes</th>
-        <th>Total</th>
-      </tr>
-      <tr>
-        <td id="account"></td>
-        <td id="likerate"></td>
-        <td id="likes"></td>
-        <td id="total"></td>
-      </tr>
-    </table>
-  </div>
-  </div>
+
 </body>
 <script defer src="./assets/js/bot.js"></script>
 <script defer src="./assets/js/main.js"></script>

@@ -76,7 +76,7 @@ function addComment (addCloseBtn = true) {
   inputTemplate.classList.add('row', 'form-group');
 
   const inputFieldDiv = document.createElement('div')
-  inputFieldDiv.classList.add((addCloseBtn) ? 'col-xs-11' : 'col-xs-12');
+  inputFieldDiv.classList.add((addCloseBtn) ? 'input-div' : 'col-xs-12');
 
   const inputField = document.createElement('input')
   inputField.classList.add('form-control', 'comment-input')
@@ -88,16 +88,16 @@ function addComment (addCloseBtn = true) {
 
   if (addCloseBtn) {
     const inputCloseDiv = document.createElement('div');
-    inputCloseDiv.classList.add('col-xs-1');
+    inputCloseDiv.classList.add('close-div');
 
     const inputCloseBtn = document.createElement('button');
-    inputCloseBtn.innerHTML = `<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>`
-    inputCloseBtn.classList.add('btn', 'btn-default')
+    inputCloseBtn.innerHTML = `<i class="fa fa-times-circle "></i>`
+    inputCloseBtn.classList.add('btn-remove')
     inputCloseBtn.setAttribute('type', 'button')
     inputCloseBtn.addEventListener('click', () => {
       inputTemplate.remove()
       const inputLeft = document.querySelectorAll('input.comment-input');
-      if (inputLeft.length === 0) commentBlock.innerHTML = '<div class="alert alert-info" style="margin: 0">No Comments</div>'
+      if (inputLeft.length === 0) commentBlock.innerHTML = '<div class="alert alert-info" style="margin: 1vw; font-size: 30px">No Comments</div>'
     })
 
     inputCloseDiv.appendChild(inputCloseBtn)
