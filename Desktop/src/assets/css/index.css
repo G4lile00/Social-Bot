@@ -42,18 +42,33 @@
   overflow: hidden;
   color: #ecf2f8;
 }
+.trans {
+  opacity: 0;
+  transition: 0s;
+}
+
+.visible {
+  opacity: 1;
+  transition: 0.6s;
+}
+.invisible {
+  opacity: 0;
+  transition: 0.6s;
+}
 
 .config {
   flex-grow: 1;
   background-color: #1a1a1a;
   border: 3px solid #b026ff;
   margin-left: 1vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 33%;
 }
 .comments_header p {
   font-size: 30px;
   text-align: left;
   margin-left: 1vw;
-
 }
 .comments_header button {
   height: 30px;
@@ -76,7 +91,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-radius: 12px;
   background-color: #ecf2f8;
-  
+
   height: 30px;
   width: 30px;
 }
@@ -104,7 +119,6 @@
   margin-left: 1vw;
   width: 70%;
   margin-right: 4vw;
-
 }
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -118,36 +132,15 @@
 }
 
 .recomend {
-  opacity: 0;
-  position: absolute;
   height: 20vh;
-  width: 8vw;
-  min-width: 120px;
-  margin: 0px;
-  margin-top: -5%;
-  margin-left: 43%;
-  text-align: center;
-  font-size: 1em;
   color: #ecf2f8;
-  font-weight: 4;
-  transition: 0.8s;
-  opacity: 0;
-  position: absolute;
   min-width: 120px;
   text-align: center;
   font-size: 1em;
-  top: 5vh;
-  width: 30%;
-  right: 0;
   font-weight: 4;
-  transition: 0.8s;
-  z-index: 3;
-}
-.range-div:hover + .recomend {
-  opacity: 1;
 }
 
-.range-div span{
+.range-div span {
   font-size: 30px;
 }
 
@@ -157,6 +150,7 @@
   border: 3px solid #b026ff;
   font-size: 30px;
   font-weight: 10px;
+  max-width: 33%;
 }
 
 .table {
@@ -175,10 +169,94 @@ th {
   color: #ecf2f8;
 }
 
+#snackbar {
+  visibility: hidden;  
+  min-width: 250px;  
+  margin-left: -125px;  
+  background-color: #f30e34; 
+  color: #fff;  
+  text-align: center;  
+  border-radius: 2px;   
+  padding: 16px;   
+  position: fixed;  
+  z-index: 1; 
+  left: 50%;  
+  bottom: 30px;  
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .user {
   flex-grow: 1;
   background-color: #1a1a1a;
   border: 3px solid #b026ff;
+  max-width: 33%;
 }
 
 .setup {
@@ -203,6 +281,11 @@ button {
 }
 
 .pass {
+  margin-top: 4vh;
+  height: 20px;
+}
+
+.hashtag {
   margin-top: 4vh;
   height: 20px;
 }

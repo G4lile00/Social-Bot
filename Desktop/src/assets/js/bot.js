@@ -2,11 +2,6 @@
 
 const puppeteer = require("puppeteer");
 
-// # set
-
-const rash = "likeforlikes";
-
-const url = "https://www.instagram.com/explore/tags/" + rash;
 
 async function bot() {
   //User information
@@ -14,7 +9,12 @@ async function bot() {
   const user = document.getElementById("login").value;
 
   const password = document.getElementById("pass").value;
+  // # set
 
+  const rash = document.getElementById("hash").value;
+
+  const url = "https://www.instagram.com/explore/tags/" + rash;
+  
   const value_like = document.getElementById("rangeValue").innerHTML;
 
   if (value_like > 72) {
@@ -31,10 +31,10 @@ async function bot() {
     const Comments = [];
     CommentsValue.forEach(function (element) {
       const commentVal = element.value.trim();
-      if (commentVal && commentVal.length) comments.push(element.value)
+      if (commentVal && commentVal.length) comments.push(element.value);
     });
   }
-  console.log(comments)
+  console.log(comments);
   //
   setComments();
   //variable set
@@ -106,30 +106,30 @@ async function bot() {
         await page.click("a._65Bje");
       }
     }
-    if (rand >=  80){
-      let Commented = ''
+    if (rand >= 80) {
+      let Commented = "";
       if (comments.length > 0) {
         const random = Math.floor(Math.random() * comments.length);
-    
+
         const commentVal = comments[random].trim();
-        if (commentVal && commentVal.length > 0) {  // If comment got anything only thn comment
-          Commented = commentVal
+        if (commentVal && commentVal.length > 0) {
+          // If comment got anything only thn comment
+          Commented = commentVal;
         }
       }
-    
+
       try {
         await page.waitFor(2000);
 
         await page.type('textarea[class="Ypffh"]', Commented);
 
         await page.click("form.X7cDz button.sqdOP");
-        
       } catch {
         await page.waitForSelector("a._65Bje");
         await page.click("a._65Bje");
       }
     }
-    
+
     //skip photo
 
     await page.waitForSelector("a._65Bje");
