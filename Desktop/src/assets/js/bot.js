@@ -52,6 +52,9 @@ async function bot() {
 
   document.getElementById("account").innerText = user;
 
+
+  document.getElementById("hashtag").innerText = rash;
+
   document.getElementById("likes").innerText = l;
 
   document.getElementById("total").innerText = 0;

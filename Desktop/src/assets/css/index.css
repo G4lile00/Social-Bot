@@ -167,6 +167,7 @@ td {
 th {
   text-align: left;
   color: #ecf2f8;
+  letter-spacing: 2px;
 }
 
 #snackbar {
@@ -182,6 +183,7 @@ th {
   z-index: 1; 
   left: 50%;  
   bottom: 30px;  
+  font-weight: 3px;
 }
 
 #snackbar.show {
