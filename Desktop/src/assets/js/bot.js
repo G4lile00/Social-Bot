@@ -17,6 +17,8 @@ async function bot() {
   
   const value_like = document.getElementById("rangeValue").innerHTML;
 
+  var comments = []
+
   if (value_like > 72) {
     alert(
       "the like rate is over 72%, your account will be in danger of soft ban"
@@ -28,15 +30,16 @@ async function bot() {
   // Setting comments
   function setComments() {
     const CommentsValue = document.querySelectorAll("input.comment-input");
-    const Comments = [];
     CommentsValue.forEach(function (element) {
       const commentVal = element.value.trim();
       if (commentVal && commentVal.length) comments.push(element.value);
     });
   }
   console.log(comments);
+ 
   //
   setComments();
+  console.log(comments[2]);
   //variable set
 
   const browser = await puppeteer.launch({
