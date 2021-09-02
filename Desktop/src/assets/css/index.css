@@ -101,7 +101,8 @@
   margin-left: 1vw;
 }
 .input-div input {
-  height: 20px;
+  height: 30px;
+  width: 25vw;
   border-radius: 12px;
   border: 0px;
   text-align: center;
