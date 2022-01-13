@@ -2,7 +2,6 @@
 
 const puppeteer = require("puppeteer");
 
-
 async function bot() {
   //User information
 
@@ -14,10 +13,10 @@ async function bot() {
   const rash = document.getElementById("hash").value;
 
   const url = "https://www.instagram.com/explore/tags/" + rash;
-  
+
   const value_like = document.getElementById("rangeValue").innerHTML;
 
-  var comments = []
+  var comments = [];
 
   if (value_like > 72) {
     alert(
@@ -36,7 +35,7 @@ async function bot() {
     });
   }
   console.log(comments);
- 
+
   //
   setComments();
   console.log(comments[2]);
@@ -54,7 +53,6 @@ async function bot() {
   l = 0;
 
   document.getElementById("account").innerText = user;
-
 
   document.getElementById("hashtag").innerText = rash;
 
@@ -108,11 +106,11 @@ async function bot() {
 
         document.getElementById("likes").innerText = l;
       } catch {
-        await page.waitForSelector("a._65Bje");
-        await page.click("a._65Bje");
+        await page.waitForSelector("div.l8mY4.feth3 button");
+        await page.click("div.l8mY4.feth3 button");
       }
     }
-    if (rand >= 80) {
+    if (rand >= 90) {
       let Commented = "";
       if (comments.length > 0) {
         const random = Math.floor(Math.random() * comments.length);
@@ -131,18 +129,18 @@ async function bot() {
 
         await page.click("form.X7cDz button.sqdOP");
       } catch {
-        await page.waitForSelector("a._65Bje");
-        await page.click("a._65Bje");
+        await page.waitForSelector("div.l8mY4.feth3 button");
+        await page.click("div.l8mY4.feth3 button");
       }
     }
 
     //skip photo
 
-    await page.waitForSelector("a._65Bje");
+    await page.waitForSelector("div.l8mY4.feth3 button");
 
     await page.waitFor(2000);
 
-    await page.click("a._65Bje");
+    await page.click("div.l8mY4.feth3 button");
   }
   alert("Bot has finished");
   browser.close();
