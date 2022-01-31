@@ -2,7 +2,7 @@
 This is a BOT build using puppeteer and Electron-Forge
 
 
-![IMG](https://user-images.githubusercontent.com/57160685/127933706-32ca1f9e-8f57-481d-b7d6-687e3f43ee39.png)
+![image](https://user-images.githubusercontent.com/57160685/151731993-e59e5d1c-a68c-40fb-919f-37590af7117c.png)
 
 # Download and Use
 
@@ -53,14 +53,18 @@ npm run make --target=@electron-forge/maker-deb
 
 ## Use
 
-![IMG](https://user-images.githubusercontent.com/57160685/127934440-9f4a612d-b115-4bd5-bef6-86ec6f68c03c.png)
+![image](https://user-images.githubusercontent.com/57160685/151732097-0c0d5144-c97a-4a59-87ce-2101dd1317f0.png)
 
 * Login
-  * input your instagram @ without the @ symbol 
+  * input your instagram user without the @ symbol 
 * Password
   * input your instagram password
+* HashTag
+  * input a desired Hashtag to the bot work on. Input it without the # symbol
 * Slide Bar
-  * in this slide bar you will select the like %, higher like % will give you more likes, but can put your accont in risk of soft ban 
+  * in this slide bar you will select the like rate, higher like rates will give you more likes, but can put your accont in risk of soft ban. REcomended like rate under the slide bar 
+ * Comments 
+  * You can add as many comments as you want, or add no comments. More comments make the bot look more human and will make it work better.
 * Run the bot
   * after completing the inputs above click here to run the bot
 
