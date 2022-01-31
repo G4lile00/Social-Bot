@@ -6,6 +6,16 @@ This is a BOT build using puppeteer and Electron-Forge
 
 # Download and Use
 
+## Download links
+
+### MEGA 
+https://mega.nz/file/FlUUhLRb#7_QwFOI56jqav9YlPHhCpuPSd0IQFWnKDC7mhbLLl0o
+
+https://mega.nz/file/N4kSXA4Q#BuyvmFO-4NrPs9K9O5jTqjyOUrG5U2IsS3loQJKyWsY
+
+### Drive
+https://drive.google.com/drive/folders/19N260ZoUtxe5GUULngCr3UxHhJ5ao909?usp=sharing
+
 ## Download
 
 ```
