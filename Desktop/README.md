@@ -63,7 +63,7 @@ npm run make --target=@electron-forge/maker-deb
   * input a desired Hashtag to the bot work on. Input it without the # symbol
 * Slide Bar
   * in this slide bar you will select the like rate, higher like rates will give you more likes, but can put your accont in risk of soft ban. REcomended like rate under the slide bar 
- * Comments 
+* Comments 
   * You can add as many comments as you want, or add no comments. More comments make the bot look more human and will make it work better.
 * Run the bot
   * after completing the inputs above click here to run the bot
