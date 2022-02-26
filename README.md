@@ -15,8 +15,8 @@
     Mobile:
   </h3>
    <p>Status: <b>Not Started ⚠️</b></p> 
-   <p>Documentation: <a href="https://github.com/G4lile00/Social-Bot/tree/main/Mobile">Not started</a></p>
-   <p>Project code: <a href="https://github.com/G4lile00/Social-Bot/tree/main/Mobile">Not started</a></p>
+   <p>Documentation: Not started</p>
+   <p>Project code: Not started</p>
 </div>
 
 
