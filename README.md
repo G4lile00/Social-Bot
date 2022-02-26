@@ -1,5 +1,5 @@
 # Social-Bot
-<h3> This repository is to display the open source code From the Social-Bot Project</h3>
+<h3> </h3>
  
 <div style="text-decoration: none;">
 <br>
