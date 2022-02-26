@@ -13,8 +13,11 @@
     Desktop:
   </h3>
    <p>Status: <b>Finished ✅</b></p> 
+   <p>Download links: <a href="https://github.com/G4lile00/Social-Bot/tree/main/Desktop#download-links">Click Here</a></p>
    <p>Documentation: <a href="https://github.com/G4lile00/Social-Bot/tree/main/Desktop#readme">Click Here</a></p>
    <p>Project code: <a href="https://github.com/G4lile00/Social-Bot/tree/main/Desktop/src">Click Here</a></p>
+
+
   <h3>
     Mobile:
   </h3>
