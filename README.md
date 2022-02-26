@@ -1,5 +1,9 @@
 # Social-Bot
-<h3> </h3>
+<h3>What is Social Bot ?</h3>
+<p>Social bot is a tool designed to gain engagement on instagram.</p>
+
+<h3>How can i use Social Bot ?</h3>
+<p>You can acess the follow links to Download the compiled version of the project or to see the source code and to compile the code for your on.</p>
  
 <div style="text-decoration: none;">
 <br>
